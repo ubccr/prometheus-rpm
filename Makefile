@@ -32,7 +32,8 @@ nginx_exporter \
 ssl_exporter \
 bind_exporter \
 keepalived_exporter \
-jolokia_exporter
+jolokia_exporter \
+nvidia_gpu_prometheus_exporter
 
 .PHONY: $(MANUAL) $(AUTO_GENERATED)
 

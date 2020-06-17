@@ -35,6 +35,22 @@ packages:
         description: |
             Prometheus exporter for hardware and OS metrics exposed by *NIX kernels,
             written in Go with pluggable metric collectors.
+  nvidia_gpu_prometheus_exporter:
+    build_steps:
+      <<: *default_build_steps
+    context:
+      <<: *default_context
+      static:
+        <<: *default_static_context
+        version: 0.0.1
+        license: ASL 2.0
+        URL: https://github.com/ubccr/nvidia_gpu_prometheus_exporter
+        summary: Prometheus Exporter for exporting NVIDIA GPU metrics
+        description: |
+            This is a Prometheus Exporter for exporting NVIDIA GPU metrics. It uses
+            the Go bindings for NVIDIA Management Library (NVML) which is a C-based
+            API that can be used for monitoring NVIDIA GPU devices. Unlike some
+            other similar exporters, it does not call the nvidia-smi binary.
   mysqld_exporter:
     build_steps:
       <<: *default_build_steps
